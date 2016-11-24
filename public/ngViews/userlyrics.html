@@ -1,0 +1,348 @@
+<body id="centerlogin2">
+
+
+<ul id="slide-out" class="side-nav">
+  <li><div class="userView">
+  </div></li>
+  <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+
+  <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
+  <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
+</ul>
+<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+
+
+<table>
+  <tr class="p-test">
+    <th><a href="">User Id</a></th>
+    <th><a href="">Song Id</a></th>
+  </tr>
+
+  <tr ng-repeat="userlyrics in userlyrics" class="p-test">
+    <td ng-click="goToLyric(userlyrics.user_id)">{{userlyrics.user_id}}</td>
+    <td ng-click="goToLyric(userlyrics.song_id)">{{userlyrics.song_id}}</td>
+  </tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+<div id="centerlyrics">
+      <div id="centered">
+        <div class="row">
+          <div class="col s12 m6">
+            <div ng-click="goToLyric(userlyrics[0].song_id)" class="card blue darken-1">
+              <div class="card-content white-text">
+                <span class="card-title" id="artistname">{{userlyrics[0].song_id}}</span>
+                <p id="songtitle">{{song.artist}}</p>
+              </div>
+              <div class="card-action">
+                <a id="yellowlyric" ng-click='showDetailView(song_id)'>View Lyrics</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      <!-- <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Beyonce</span>
+                  <p id="songtitle">Single Ladies</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Robyn</span>
+                  <p id="songtitle">Call Your Girlfriend</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Tycho</span>
+                  <p id="songtitle">Epoch</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Rilo Kiley</span>
+                  <p id="songtitle">More Adventurous</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Bjork</span>
+                  <p id="songtitle">Vulnicura</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Disclosure</span>
+                  <p id="songtitle">Jaded</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">High Highs</span>
+                  <p id="songtitle">Milan</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Phantogram</span>
+                  <p id="songtitle">Answer</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Beach House</span>
+                  <p id="songtitle">Walk in the Park</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div id="centerlyrics">
+          <div id="centered">
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card blue darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title" id="artistname">Little Dragon</span>
+                    <p id="songtitle">Cat Rider</p>
+                  </div>
+                  <div class="card-action">
+                    <a id="yellowlyric" href="#">View Lyrics</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Banks</span>
+                  <p id="songtitle">Goddess</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card blue darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title" id="artistname">Ratatat</span>
+                    <p id="songtitle">Wildcat</p>
+                  </div>
+                  <div class="card-action">
+                    <a id="yellowlyric" href="#">View Lyrics</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Hot Chip</span>
+                  <p id="songtitle">Dark and Stormy</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card blue darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title" id="artistname">Cat Stevens</span>
+                    <p id="songtitle">Wild World</p>
+                  </div>
+                  <div class="card-action">
+                    <a id="yellowlyric" href="#">View Lyrics</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Tame Impala</span>
+                  <p id="songtitle">Sestri Levanti</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card blue darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title" id="artistname">Royksopp</span>
+                    <p id="songtitle">Sordid Affair</p>
+                  </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div id="centered">
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card blue darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title" id="artistname">Teen Daze</span>
+                    <p id="songtitle">Sun Burst</p>
+                  </div>
+                  <div class="card-action">
+                    <a id="yellowlyric" href="#">View Lyrics</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">Porter Robinson</span>
+                  <p id="songtitle">Fellow Feeling</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="centered">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title" id="artistname">SBTRKT</span>
+                  <p id="songtitle">Never Never</p>
+                </div>
+                <div class="card-action">
+                  <a id="yellowlyric" href="#">View Lyrics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
+</body>
+
+    

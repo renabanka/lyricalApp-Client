@@ -1,0 +1,31 @@
+
+    <div id="loginform">
+        <!-- <a href="file:///Users/Russell/Sites/lyrical/lyrical-fe/index.html"> -->
+        <h1>Lyrical</h1>
+        </a>
+      <form ng-submit="createAccount(username, email, password)"> 
+          <p> 
+            <input id="username" ng-model="username" required="required" type="text" placeholder="Name" /> 
+          </p>
+          <p> 
+            <input id="email" ng-model="email" required="required" type="text" placeholder="Email"/>
+          </p>
+          <p> 
+            <input id="password" ng-model="password" required="required" type="password" placeholder="Password" /> 
+          </p>
+          <p class="login button"> 
+             <button type='submit' class="waves-effect waves-light btn" id="button2">Register</button>
+            <a href="/" id="button1" class="waves-effect waves-light btn">Go Back</a>
+          </p>
+      </form>
+
+      <p>{{message}}</p>
+
+    </div>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+    
+        
