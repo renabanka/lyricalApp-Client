@@ -3,20 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="418e612b-5ad6-44bb-a76e-ef89d9bf335c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/app.LoginCtrl.js" afterPath="$PROJECT_DIR$/public/javascripts/app.LoginCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/app.LyricsDetailCtrl.js" afterPath="$PROJECT_DIR$/public/javascripts/app.LyricsDetailCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/app.UserLyricsCtrl.js" afterPath="$PROJECT_DIR$/public/javascripts/app.UserLyricsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/materialize.js" afterPath="$PROJECT_DIR$/public/javascripts/materialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ngViews/addlyric.html" afterPath="$PROJECT_DIR$/public/ngViews/addlyric.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ngViews/dashboard.html" afterPath="$PROJECT_DIR$/public/ngViews/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ngViews/login.html" afterPath="$PROJECT_DIR$/public/ngViews/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ngViews/lyrics.html" afterPath="$PROJECT_DIR$/public/ngViews/lyrics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ngViews/register.html" afterPath="$PROJECT_DIR$/public/ngViews/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ngViews/userlyrics.html" afterPath="$PROJECT_DIR$/public/ngViews/userlyrics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/materialize.css" afterPath="$PROJECT_DIR$/public/stylesheets/materialize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.sass" afterPath="$PROJECT_DIR$/public/stylesheets/style.sass" />
     </list>
     <ignored path="lyricalApp-Client.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,17 +36,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/ngViews/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="49" />
+            <state relative-caret-position="705">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="materialize.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="materialize.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/materialize.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -69,6 +56,16 @@
                 <marker date="1480365337000" expanded="true" signature="236576:236605" ph="..." />
                 <marker date="1480365337000" expanded="true" signature="236866:236876" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.DashboardCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/app.DashboardCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,16 +120,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/ngViews/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="userlyrics.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/ngViews/userlyrics.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -166,8 +153,8 @@
         <option value="$PROJECT_DIR$/public/ngViews/lyrics.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.sass" />
         <option value="$PROJECT_DIR$/public/stylesheets/materialize.css" />
-        <option value="$PROJECT_DIR$/public/ngViews/dashboard.html" />
         <option value="$PROJECT_DIR$/public/javascripts/materialize.js" />
+        <option value="$PROJECT_DIR$/public/ngViews/dashboard.html" />
       </list>
     </option>
   </component>
@@ -374,12 +361,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480106775599</updated>
-      <workItem from="1480106777506" duration="29709000" />
+      <workItem from="1480106777506" duration="30196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29709000" />
+    <option name="totallyTimeSpent" value="30196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="94" width="1364" height="615" extended-state="0" />
@@ -523,14 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/app.DashboardCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -619,14 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/ngViews/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/materialize.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -636,6 +607,22 @@
             <marker date="1480365337000" expanded="true" signature="236576:236605" ph="..." />
             <marker date="1480365337000" expanded="true" signature="236866:236876" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app.DashboardCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ngViews/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
