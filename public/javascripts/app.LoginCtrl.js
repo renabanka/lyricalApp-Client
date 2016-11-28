@@ -1,15 +1,19 @@
 angular.module('lyricalApp')
     .controller('LoginCtrl', function($scope, $http, $location, $rootScope) {
 
-        console.log($rootScope)
+        console.log($rootScope);
+
+
 
         $scope.changetoLoginRoute = function() {
-            $location.path('/dashboard');
-        }
+                $location.path('/dashboard');
+        };
+
         $scope.changetoRegisterRoute = function() {
             $location.path('/register');
-        }
-        $scope.message = ''
+        };
+
+        $scope.message = '';
         $scope.loginToDashboard = function(username, password) {
             $http({
                 url: 'http://localhost:9292/account/login',
@@ -24,6 +28,7 @@ angular.module('lyricalApp')
                     $scope.message = results.message;
                     $rootScope.key = results.key;
                     console.log($rootScope);
+
                     $scope.changetoLoginRoute();
                 }
             }).error(function(err) {

@@ -6,13 +6,10 @@ angular.module('lyricalApp')
             $location.path('/' + id);
         };
 
-
     $scope.goToDashboard = function(id) {
             console.log('back on dashboard')
             $location.path('/dashboard');
         };
-
-
 
     $scope.goToSavedLyrics = function(id) {
             console.log('routed to saved lyrics page')
@@ -23,7 +20,6 @@ angular.module('lyricalApp')
 
             $location.path('/');
         };
-
 
     $scope.lyrics = "";
     $scope.fetch = function() {
@@ -45,15 +41,19 @@ angular.module('lyricalApp')
         var uid = $rootScope.key;
         console.log(uid);
         console.log('this is happeninggg')
+        console.log($scope.lyrics.song)
+        console.log($scope.lyrics.artist)
+        console.log($scope.lyrics.lyrics)
         console.log($routeParams.id, ' this is route params')
         console.log($rootScope, ' this is rootscope')
          $http({
              url: 'http://localhost:9292/userlyrics/savelyrics',
              method: 'POST',
-             params: { song_id: $routeParams.id, user_id: $rootScope.key}
+             params: { song_id: $routeParams.id, user_id: $rootScope.key, song: $scope.lyrics.song, artist: $scope.lyrics.artist}
          }).success(function(results) {
              console.log(results);
-                 // $scope.changetoRoute();
+             console.log($rootScope.key, 'this is the userid');
+                 $scope.goToSavedLyrics();
             console.log('Success');
          }).error(function(err) {
              console.log('There was an error');
