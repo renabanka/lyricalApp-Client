@@ -1,4 +1,6 @@
-<body>
+<body id="centerlogin">
+
+
 
 <ul id="slide-out" class="side-nav">
     <li><div class="userView">
@@ -9,7 +11,6 @@
     <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
 </ul>
 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-<br>
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-    <form ng-submit="createLyric(artist, song, lyrics, year, genre, image, user_id, album)" autocomplete="on">
+    <form ng-submit="createLyric(artist, song, album, lyrics, year, genre, image, user_id)" autocomplete="on">
         <p>
             <input id="artist" ng-model="artist" required="required" type="text" placeholder="Artist" />
         </p>
@@ -34,7 +35,7 @@
             <input id="song" ng-model="song" required="required" type="text" placeholder="Song"/>
         </p>
         <p>
-            <input id="lyrics" ng-model="lyrics" required="required" type="text" placeholder="Lyrics" />
+            <input id="lyrics" ng-model="lyrics" required="required" type="longtext" placeholder="Lyrics" />
         </p>
         <p>
             <input id="album" ng-model="album" required="required" type="text" placeholder="Album" />
@@ -49,7 +50,7 @@
             <input id="image" ng-model="image" required="required" type="text" placeholder="Image" />
         </p>
         <p>
-            <input id="user_id" ng-model="user_id" required="required" type="text" placeholder="User_id" />
+            <input id="user_id" ng-model="user_id" required="required" type="integer" placeholder="User_id" />
         </p>
         <p class="login button">
             <button type='submit' class="waves-effect waves-light btn" id="button2">Add Lyrics</button>
@@ -65,4 +66,5 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script type="text/javascript" src="javascripts/materialize.js"></script>
+
 </body>

@@ -19,7 +19,7 @@ angular.module('lyricalApp')
     $scope.goToLogout = function(id) {
             
         $location.path('/');
-    };  
+    };
 
     $scope.lyrics = [];
     $scope.fetch = function() {

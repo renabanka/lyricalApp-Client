@@ -43,17 +43,10 @@ angular.module('lyricalApp')
 
     $scope.deleteFromUserLyricsDatabase = function() {
             var uid = $rootScope.key;
-            console.log(uid);
-            console.log('this is happeninggg')
-            console.log($scope.lyrics.song)
-            console.log($scope.lyrics.artist)
-            console.log($scope.lyrics.lyrics)
-            console.log($routeParams.id, ' this is route params')
-            console.log($rootScope, ' this is rootscope')
             $http({
-                url: 'http://localhost:9292/userlyrics/savelyrics',
-                method: 'POST',
-                params: { song_id: $routeParams.id, user_id: $rootScope.key, song: $scope.lyrics.song, artist: $scope.lyrics.artist}
+                url: 'http://localhost:9292/userlyrics/1',
+                method: 'DELETE',
+                params: { id: "1"}
             }).success(function(results) {
                 console.log(results);
                 console.log($rootScope.key, 'this is the userid');
