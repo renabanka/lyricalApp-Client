@@ -1,56 +1,63 @@
 angular.module('lyricalApp')
     .controller('UserLyricsCtrl', function($scope, $http, $routeParams, $rootScope, $location) {
 
-    $scope.goToLyric = function(id) {
+        $scope.goToLyric = function(id) {
             console.log('is this working')
             $location.path('/' + id);
         };
 
-    $scope.goToDashboard = function() {
+        $scope.goToDashboard = function() {
             console.log('back on dashboard')
             $location.path('/dashboard');
         };
 
-    $scope.goToSavedLyrics = function() {
+        $scope.goToSavedLyrics = function() {
             console.log('routed to saved lyrics page')
             $location.path('/mylyrics');
         };
 
-    $scope.goToLogout = function() {
+        $scope.goToLogout = function() {
             $location.path('/');
         };
 
-    $scope.userlyrics = [];
-    $scope.fetch = function() {
+        $scope.newuserlyrics = [];
+        $scope.fetch = function() {
 
-        $http.get('http://localhost:9292/userlyrics/').success(function(results) {
-            console.log($routeParams);
-            console.log(results);
-            $scope.userlyrics = results;
-            console.log(results);
-            console.log($rootScope.key, 'userid!');
-            // 1. get user id
-            // 2. loop through results
-            // 3. if results .user_id == id
-            // 4. push to $scope.userLyrics
+            $http.get('http://localhost:9292/userlyrics/').success(function(results) {
+                console.log($routeParams);
+                console.log(results);
+                $scope.userlyrics = results;
 
-        }).error(function(err) {
-            console.log(err);
-        });
-    };
+                for (var i = 0; i < results.length; i++) {
 
-    $scope.fetch()
+                    console.log(results[i].user_id)
+                    console.log(localStorage.userid)
+                    if (results[i].user_id == localStorage.userid) {
+                        console.log('there was a match!')
+                        $scope.newuserlyrics.push($scope.userlyrics[i])}
+                    else {
+                        console.log('this is not working :(')
+                    }
 
-    $scope.deleteFromUserLyricsDatabase = function() {
-            var uid = $rootScope.key;
+                }
+
+                //console.log($scope.newuserlyrics);
+
+
+            }).error(function(err) {
+                console.log(err);
+            });
+        };
+
+        $scope.fetch()
+
+        $scope.deleteFromUserLyricsDatabase = function() {
             $http({
-                url: 'http://localhost:9292/userlyrics/1',
+                url: 'http://localhost:9292/userlyrics/:id',
                 method: 'DELETE',
-                params: { id: "1"}
+                params: { id: $routeParams.id}
             }).success(function(results) {
                 console.log(results);
-                console.log($rootScope.key, 'this is the userid');
-                // $scope.changetoRoute();
                 console.log('Success');
             }).error(function(err) {
                 console.log('There was an error');
@@ -59,4 +66,4 @@ angular.module('lyricalApp')
 
         }
 
-});
+    });

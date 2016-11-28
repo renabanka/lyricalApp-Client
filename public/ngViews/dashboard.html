@@ -1,5 +1,6 @@
-    <body id="centerlogin">
-    <div id="loginform2">
+<body id="centerlogin">
+
+    <div class="fade-in two" id="loginform2">
       <form id="form1" action="" autocomplete="on"> 
           <p> 
             <input ng-model="query" id="words" class="main-search" id="email" name="email" required="required" type="text" placeholder=""/>
@@ -9,67 +10,47 @@
 
     </div>
       <ul id="slide-out" class="side-nav">
-      <li><div class="userView">
-    </div></li>
-              <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
-
+      <li><div class="userView"></div></li>
+      <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
       <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
       <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
       </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> 
+      <a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>
     <br>
 
+   <div class="fade-in two" id="p-testcenter">
 
+    <table>
+        <tr class="p-test">
+          <th><a href="" ng-click="sortField = 'artist'; reverse = !reverse">Artist</a></th>
+          <th><a href="" ng-click="sortField = 'song'; reverse = !reverse">Song</a></th>
+        </tr>
 
-
-
-
-
-   <div id="p-testcenter">
-
-  <table>
-    <tr class="p-test">
-     
-      <th><a href="" ng-click="sortField = 'artist'; reverse = !reverse">Artist</a></th>
-      <th><a href="" ng-click="sortField = 'song'; reverse = !reverse">Song</a></th>
-    </tr>
-
-<tr ng-repeat="lyric in lyrics | filter:query | orderBy:sortField:reverse" class="p-test">
-    
-     
-      <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.artist}}</td> 
-      <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.song}}</td>
-
-
-
-
- </tr>
-
-  </table>  
+        <tr ng-repeat="lyric in lyrics | filter:query | orderBy:sortField:reverse" class="p-test">
+          <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.artist}}</td>
+          <td><a class="a-colored" href="" ng-click="goToLyric(lyric.id)">{{lyric.song}}</td>
+        </tr>
+    </table>
  
-  </div>
-
-    
-
+   </div>
 
   <div class="fade-in two">    
     <div class="carousel">
         <nav id="navbar">Featured Lyrics</nav>
         <div id="centerthisdiv">
-      <a class="carousel-item" href="#one!">
-        <div class="card1 blue darken-1">
-          <div id="cardcenter" class="card-content white-text">
-            <span class="card-title">One Love</span>
-              <p>Bob Marley</p>
-              <p class="small-paragraph"ng-click="goToLyric(1)">View Lyrics &#10095;</p>
 
-
-          </div>
-        <div class="card-action">
-        </div>
-        </div></a>
+            <a class="carousel-item" href="#one!"><div class="card1 blue darken-1">
+                    <div id="cardcenter" class="card-content white-text">
+                        <span class="card-title">One Love</span>
+                        <p>Bob Marley</p>
+                        <p class="small-paragraph"ng-click="goToLyric(1)">View Lyrics &#10095;</p>
+                    </div>
+                    <div class="card-action">
+                    </div>
+                    </div>
+                    </a>
           <a class="carousel-item" href="#one!"><div class="card1 blue darken-1">
-        <div id="cardcenter" class="card-content white-text">
+            <div id="cardcenter" class="card-content white-text">
             <span class="card-title">Never Never</span>
               <p>SBTRKT</p>
             <p class="small-paragraph"ng-click="goToLyric(2)">View Lyrics &#10095;</p>
@@ -108,28 +89,10 @@
 
 
 
-<!-- 
-    <form ng-submit="createLyric(artist, song, lyrics, genre, year,  )" autocomplete="on"> 
-        <p> 
-          <input id="username" ng-model="username" required="required" type="text" placeholder="Username" /> 
-        </p>
-        <p> 
-          <input id="password" ng-model="password" required="required" type="password" placeholder="Password" />
-        </p>
-        <p class="login button"> 
-          <a id="button1" class="waves-effect waves-light btn">Login</a>
-          <button type='submit'class="waves-effect waves-light btn" id="button1">Login</button>
-          <button ng-click="changetoRegisterRoute()" class="waves-effect waves-light btn" id="button2">Register</button>
-          <!- <a href="file:///Users/Russell/Sites/lyrical/lyrical-fe/registration.html" id="button2" class="waves-effect waves-light btn">Register</a>
-        </p>
-    </form> --> 
-
-
-
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
       <script type="text/javascript" src="javascripts/materialize.js"></script>
-    </body>
+</body>
 
 
 

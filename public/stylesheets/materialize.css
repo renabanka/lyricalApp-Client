@@ -7,10 +7,7 @@
 
 
 .p-scroll {
-    color: lime;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    margin: 10px 0 0 10px;
     white-space: pre;
     overflow: hidden;
     animation: type 4s steps(60, end);
@@ -19,7 +16,6 @@
     margin: 0 auto;
     background: black;
     font-size: 1.5rem;
-
 }
 
 .small-paragraph {
@@ -45,16 +41,31 @@
  .p-test {
  color:white;
  }
-
+ #menubutton {
+     color: white;
+ }
 
   #p-testcenter {
-  width: 750px;
-  margin: 0 auto; 
+  width: auto;
+  margin-right: 18%;
+  margin-left: 18%;
   background: black;
-  height:130px;
+  height:15rem;
   overflow:scroll;
   overflow-x:hidden;
   }
+
+
+#p-mylyrics {
+    width: 750px;
+    margin: 0 auto;
+    background: black;
+    height:auto;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+
 
 
   .a-colored {
@@ -130,8 +141,9 @@
   font-size: 3em;
   font-family: 'Shrikhand', cursive;
   background: black;
-  margin-left: 3%; 
-  margin-top: 4%;
+  margin-left: 3%;
+     width: auto;
+  margin-top: 6%;
 }
  #navbar2 {
   // margin-bottom: 4%;
@@ -4856,7 +4868,7 @@ small {
   transition: box-shadow .25s;
   border-radius: 2px;
   height: 296px;
-  width: 298px;
+  width: 16rem;
   text-align: center;
   font-size: 1.8em;
   font-family: 'Roboto', sans-serif;
@@ -8093,9 +8105,9 @@ background: #f39c12;
 .carousel {
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: auto;
   height: 523px;
-  margin-top: 4%;
+  margin-top: 0;
   margin-left: -4%;
   -webkit-perspective: 500px;
           perspective: 500px;
@@ -8951,3 +8963,20 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding-top: 48%;
 }
 }
+@media only screen
+and (max-device-width: 640px),
+only screen and (max-device-width: 667px),
+only screen and (max-width: 480px)
+{.p-scroll {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 0 0 10px;
+    overflow: visible;
+    color:white;
+    width: auto;
+    vertical-align: middle;
+    background: black;
+    font-size: 1.5rem;
+}}
+/*body {*/
+    /*padding: 0;*/
+/*}}*/

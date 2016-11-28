@@ -1,7 +1,5 @@
 <body id="centerlogin">
 
-
-
 <ul id="slide-out" class="side-nav">
     <li><div class="userView">
     </div></li>
@@ -10,19 +8,18 @@
     <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
     <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
 </ul>
-<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+<a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>
+<button ng-click="saveToLyricsDatabase()" class="waves-effect waves-light btn" id="button2">Save Lyric</button>
 
 
-
-<div id="insertlyrics">
+      <div id="insertlyrics">
           <h2 id="songtitle">{{lyrics.song}}</h1>
           <h1 id="artistname">{{lyrics.artist}}</h1>
+          <p class="p-scroll">{{lyrics.lyrics}}</p>
 
-            <p class="p-scroll">{{lyrics.lyrics}}</p>
-              <!--id="lyrics-styling"-->
       </div>
 
-        <button ng-click="saveToLyricsDatabase()" class="waves-effect waves-light btn" id="button2">Save Lyric</button>
 
 
 

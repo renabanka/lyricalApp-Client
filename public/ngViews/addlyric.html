@@ -1,67 +1,52 @@
 <body id="centerlogin">
 
+    <ul id="slide-out" class="side-nav">
+        <li><div class="userView">
+        </div></li>
+        <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+
+        <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
+        <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
+    </ul>
+
+    <a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>
+
+    <div id="loginform">
 
 
-<ul id="slide-out" class="side-nav">
-    <li><div class="userView">
-    </div></li>
-    <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+        <h1>Add Lyric</h1>
+            <form ng-submit="createLyric(artist, song, album, lyrics, year, genre, image, user_id)" autocomplete="on">
+                <p>
+                    <input id="artist" ng-model="artist" required="required" type="text" placeholder="Artist" />
+                </p>
+                <p>
+                    <input id="song" ng-model="song" required="required" type="text" placeholder="Song"/>
+                </p>
+                <p>
+                    <input id="lyrics" ng-model="lyrics" required="required" type="longtext" placeholder="Lyrics" />
+                </p>
+                <p>
+                    <input id="album" ng-model="album" required="required" type="text" placeholder="Album" />
+                </p>
+                <p>
+                    <input id="year" ng-model="year" required="required" type="text" placeholder="Year" />
+                </p>
+                <p>
+                    <input id="genre" ng-model="genre" required="required" type="text" placeholder="Genre"/>
+                </p>
+                <p>
+                    <input id="image" ng-model="image" required="required" type="text" placeholder="Image" />
+                </p>
+                <p>
+                    <input id="user_id" ng-model="user_id" required="required" type="integer" placeholder="User_id" />
+                </p>
+                <p class="login button">
+                    <button type='submit' class="waves-effect waves-light btn" id="button2">Add Lyrics</button>
 
-    <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
-    <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
-</ul>
-<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                </p>
+            </form>
 
-
-
-
-
-
-
-
-
-<div id="loginform">
-    <h1>Add Lyric</h1>
-
-
-
-
-
-    <form ng-submit="createLyric(artist, song, album, lyrics, year, genre, image, user_id)" autocomplete="on">
-        <p>
-            <input id="artist" ng-model="artist" required="required" type="text" placeholder="Artist" />
-        </p>
-        <p>
-            <input id="song" ng-model="song" required="required" type="text" placeholder="Song"/>
-        </p>
-        <p>
-            <input id="lyrics" ng-model="lyrics" required="required" type="longtext" placeholder="Lyrics" />
-        </p>
-        <p>
-            <input id="album" ng-model="album" required="required" type="text" placeholder="Album" />
-        </p>
-        <p>
-            <input id="year" ng-model="year" required="required" type="text" placeholder="Year" />
-        </p>
-        <p>
-            <input id="genre" ng-model="genre" required="required" type="text" placeholder="Genre"/>
-        </p>
-        <p>
-            <input id="image" ng-model="image" required="required" type="text" placeholder="Image" />
-        </p>
-        <p>
-            <input id="user_id" ng-model="user_id" required="required" type="integer" placeholder="User_id" />
-        </p>
-        <p class="login button">
-            <button type='submit' class="waves-effect waves-light btn" id="button2">Add Lyrics</button>
-
-        </p>
-    </form>
-
-
-
-</div>
-
+    </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>

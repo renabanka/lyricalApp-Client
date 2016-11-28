@@ -27,6 +27,8 @@ angular.module('lyricalApp')
                 } else {
                     $scope.message = results.message;
                     $rootScope.key = results.key;
+                    localStorage.setItem('userid', $rootScope.key)
+                    console.log(localStorage.getItem(localStorage.key), 'skjdflkasjflk');
                     console.log($rootScope);
 
                     $scope.changetoLoginRoute();

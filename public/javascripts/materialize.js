@@ -13,7 +13,7 @@ var txtLen = txt.length;
 var char = 0;
 $('.main-search').attr('placeholder');
 (function typeIt() {
-    var humanize = Math.round(Math.random() * (300 - 30)) + 30;
+    var humanize = Math.round(Math.random() * (500- 30)) + 30;
     timeOut = setTimeout(function () {
         char++;
         var type = txt.substring(0, char);
