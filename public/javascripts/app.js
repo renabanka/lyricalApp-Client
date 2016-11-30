@@ -4,6 +4,8 @@ angular.module('lyricalApp', [ 'ngRoute'
     '$routeProvider',
     function($locationProvider, $routeProvider) {
 
+
+
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false // good for anything IE9+

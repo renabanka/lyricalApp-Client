@@ -13,21 +13,26 @@
 <a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>
 
 
+
+
 <h2 id="songtitle">My Saved Lyrics</h1>
 
 
 
-  <div id="p-mylyrics">
+
+  <div class="fade-in two" id="p-testcenter">
   <table>
   <tr class="p-test">
     <th><a href="">Artist</a></th>
     <th><a href="">Song</a></th>
+    <th></th>
 
   </tr>
 
   <tr ng-repeat="lyric in newuserlyrics track by $index" class="p-test">
     <td ng-click="goToLyric(lyric.song_id)">{{lyric.artist}}</td>
   <td ng-click="goToLyric(lyric.song_id)">{{lyric.song}}</td>
+    <td><button ng-click="deleteFromUserLyricsDatabase(lyric.id)" class="waves-effect waves-light btn" id="button2">Delete</button></td>
 
   </tr>
 

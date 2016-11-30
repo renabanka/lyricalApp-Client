@@ -51,17 +51,46 @@ angular.module('lyricalApp')
 
         $scope.fetch()
 
-        $scope.deleteFromUserLyricsDatabase = function() {
+        $scope.deleteFromUserLyricsDatabase = function(id) {
             $http({
-                url: 'http://localhost:9292/userlyrics/:id',
+                url: 'http://localhost:9292/userlyrics/' + id,
                 method: 'DELETE',
-                params: { id: $routeParams.id}
             }).success(function(results) {
                 console.log(results);
                 console.log('Success');
+                $scope.newuserlyrics = [];
+                $scope.fetch = function() {
+
+                    $http.get('http://localhost:9292/userlyrics/').success(function(results) {
+                        console.log($routeParams);
+                        console.log(results);
+                        $scope.userlyrics = results;
+
+                        for (var i = 0; i < results.length; i++) {
+
+                            console.log(results[i].user_id)
+                            console.log(localStorage.userid)
+                            if (results[i].user_id == localStorage.userid) {
+                                console.log('there was a match!')
+                                $scope.newuserlyrics.push($scope.userlyrics[i])}
+                            else {
+                                console.log('this is not working :(')
+                            }
+
+                        }
+
+                        //console.log($scope.newuserlyrics);
+
+
+                    }).error(function(err) {
+                        console.log(err);
+                    });
+                };
+
             }).error(function(err) {
                 console.log('There was an error');
                 console.log(err);
+
             })
 
         }

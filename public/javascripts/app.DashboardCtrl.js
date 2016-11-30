@@ -14,9 +14,14 @@ angular.module('lyricalApp')
     $scope.goToSavedLyrics = function() {
             console.log('routed to saved lyrics page')
             $location.path('/mylyrics');
-    };  
+    };
 
-    $scope.goToLogout = function(id) {
+        $scope.addLyrics = function() {
+            console.log('routed to saved lyrics page')
+            $location.path('/createlyrics');
+        };
+
+        $scope.goToLogout = function(id) {
             
         $location.path('/');
     };

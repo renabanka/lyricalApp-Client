@@ -18,7 +18,7 @@ angular.module('lyricalApp')
 
      $scope.createLyric = function(artist, song, album, lyrics, year, genre, image, user_id) {
             $http({
-                url: 'http://localhost:9292/dashboard/createlyrics/',
+                url: 'http://localhost:9292/dashboard/createlyrics',
                 method: 'POST',
                 params: { artist: artist, song: song, album: album, lyrics: lyrics, year: year, genre: genre, image: image, user_id: user_id }
             }).success(function(results) {
