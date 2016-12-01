@@ -16,6 +16,11 @@ angular.module('lyricalApp')
             $location.path('/mylyrics');
         };
 
+     $scope.addLyrics = function() {
+            console.log('routed to saved lyrics page')
+            $location.path('/createlyrics');
+        };
+
      $scope.createLyric = function(artist, song, album, lyrics, year, genre, image, user_id) {
             $http({
                 url: 'http://localhost:9292/dashboard/createlyrics',

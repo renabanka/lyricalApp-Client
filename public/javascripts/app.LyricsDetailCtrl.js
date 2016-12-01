@@ -21,6 +21,12 @@ angular.module('lyricalApp')
             $location.path('/');
         };
 
+
+    $scope.addLyrics = function() {
+            console.log('routed to saved lyrics page')
+            $location.path('/createlyrics');
+        };
+
     $scope.lyrics = "";
     $scope.fetch = function() {
 

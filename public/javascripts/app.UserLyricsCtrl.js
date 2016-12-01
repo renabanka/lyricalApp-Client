@@ -20,6 +20,11 @@ angular.module('lyricalApp')
             $location.path('/');
         };
 
+        $scope.addLyrics = function() {
+            console.log('routed to saved lyrics page')
+            $location.path('/createlyrics');
+        };
+
         $scope.newuserlyrics = [];
         $scope.fetch = function() {
 
@@ -86,6 +91,8 @@ angular.module('lyricalApp')
                         console.log(err);
                     });
                 };
+
+                $scope.fetch()
 
             }).error(function(err) {
                 console.log('There was an error');
