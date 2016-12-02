@@ -28,7 +28,7 @@ angular.module('lyricalApp')
         $scope.newuserlyrics = [];
         $scope.fetch = function() {
 
-            $http.get('http://localhost:9292/userlyrics/').success(function(results) {
+            $http.get('http://104.236.15.65/userlyrics/').success(function(results) {
                 console.log($routeParams);
                 console.log(results);
                 $scope.userlyrics = results;
@@ -58,7 +58,7 @@ angular.module('lyricalApp')
 
         $scope.deleteFromUserLyricsDatabase = function(id) {
             $http({
-                url: 'http://localhost:9292/userlyrics/' + id,
+                url: 'http://104.236.15.65/userlyrics/' + id,
                 method: 'DELETE',
             }).success(function(results) {
                 console.log(results);
@@ -66,7 +66,7 @@ angular.module('lyricalApp')
                 $scope.newuserlyrics = [];
                 $scope.fetch = function() {
 
-                    $http.get('http://localhost:9292/userlyrics/').success(function(results) {
+                    $http.get('http://104.236.15.65/userlyrics/').success(function(results) {
                         console.log($routeParams);
                         console.log(results);
                         $scope.userlyrics = results;

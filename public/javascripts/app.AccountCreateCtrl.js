@@ -9,7 +9,7 @@ angular.module('lyricalApp')
 
         $scope.createAccount = function(username, email, password) {
             $http({
-                url: 'http://localhost:9292/account/register',
+                url: 'http://104.236.15.65/account/register',
                 method: 'POST',
                 params: { username: username, email: email, password: password }
             }).success(function(results) {

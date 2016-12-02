@@ -28,7 +28,7 @@ angular.module('lyricalApp')
 
     $scope.lyrics = [];
     $scope.fetch = function() {
-            $http.get('http://localhost:9292/dashboard').success(function(results) {
+            $http.get('http://104.236.15.65/dashboard').success(function(results) {
                 $scope.lyrics = results;
             }).error(function(err) {
                 console.log(err);

@@ -30,7 +30,7 @@ angular.module('lyricalApp')
     $scope.lyrics = "";
     $scope.fetch = function() {
 
-        $http.get('http://localhost:9292/dashboard/' + $routeParams.id).success(function(results) {
+        $http.get('http://104.236.15.65/dashboard/' + $routeParams.id).success(function(results) {
             console.log($routeParams);
             console.log(results);
             $scope.lyrics = results;
@@ -53,7 +53,7 @@ angular.module('lyricalApp')
         console.log($routeParams.id, ' this is route params')
         console.log($rootScope, ' this is rootscope')
          $http({
-             url: 'http://localhost:9292/userlyrics/savelyrics',
+             url: 'http://104.236.15.65/userlyrics/savelyrics',
              method: 'POST',
              params: { song_id: $routeParams.id, user_id: localStorage.userid, song: $scope.lyrics.song, artist: $scope.lyrics.artist}
          }).success(function(results) {

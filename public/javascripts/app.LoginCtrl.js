@@ -16,7 +16,7 @@ angular.module('lyricalApp')
         $scope.message = '';
         $scope.loginToDashboard = function(username, password) {
             $http({
-                url: 'http://localhost:9292/account/login',
+                url: 'http://104.236.15.65/account/login',
                 method: 'POST',
                 params: { username: username, password: password }
             }).success(function(results) {
