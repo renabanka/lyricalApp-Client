@@ -1,16 +1,29 @@
 <body id="centerlogin">
 
-    <ul id="slide-out" class="side-nav">
-        <li><div class="userView">
-        </div></li>
-        <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+    <!--<ul id="slide-out" class="side-nav">-->
+        <!--<li><div class="userView">-->
+        <!--</div></li>-->
+        <!--<li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>-->
 
-        <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
-        <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
-        <li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>
-    </ul>
+        <!--<li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>-->
+        <!--<li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>-->
+        <!--<li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>-->
+    <!--</ul>-->
 
-    <a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>
+    <!--<a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>-->
+
+
+    <div id="mySidenav" class="sidenav">
+        <p class="closebtn" onclick="closeNav()">&times;</p>
+        <ul>
+            <li><div class="userView"></div></li>
+            <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+            <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
+            <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
+            <!--<li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>-->
+        </ul>
+    </div>
+    <span style="font-size:1.5rem;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
 
     <div id="loginform">
 

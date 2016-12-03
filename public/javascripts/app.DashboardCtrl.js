@@ -26,6 +26,8 @@ angular.module('lyricalApp')
         $location.path('/');
     };
 
+
+
     $scope.lyrics = [];
     $scope.fetch = function() {
             $http.get('http://104.236.15.65/dashboard').success(function(results) {

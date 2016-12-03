@@ -26,13 +26,22 @@ $('.main-search').attr('placeholder');
     }, humanize);
 }());
 
-$('.button-collapse').sideNav({
-  menuWidth: 200,
-  edge: 'left',
-  closeOnClick: true, 
-  draggable: true
+// $('.button-collapse').sideNav({
+//   menuWidth: 200,
+//   edge: 'left',
+//   closeOnClick: true,
+//   draggable: true
+// }
+// );
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
 }
-);
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    console.log('this happened')
+}
     $(document).ready(function(){
       $('.carousel').carousel();
     });

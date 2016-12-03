@@ -2,18 +2,29 @@
 
 
 
-<ul id="slide-out" class="side-nav">
-  <li><div class="userView">
-  </div></li>
-  <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+<!--<ul id="slide-out" class="side-nav">-->
+  <!--<li><div class="userView">-->
+  <!--</div></li>-->
+  <!--<li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>-->
 
-  <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
-  <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
-  <li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>
-</ul>
-<a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>
+  <!--<li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>-->
+  <!--<li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>-->
+  <!--<li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>-->
+<!--</ul>-->
+<!--<a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>-->
 
+<div id="mySidenav" class="sidenav">
+  <p class="closebtn" onclick="closeNav()">&times;</p>
+  <ul>
+    <li><div class="userView"></div></li>
+    <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+    <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
+    <!--<li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>-->
+    <li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>
+  </ul>
+</div>
 
+<span style="font-size:1.5rem;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
 
 
 <h2 id="songtitle">My Saved Lyrics</h1>
@@ -33,7 +44,7 @@
   <tr ng-repeat="lyric in newuserlyrics track by $index" class="p-test">
     <td ng-click="goToLyric(lyric.song_id)">{{lyric.artist}}</td>
   <td ng-click="goToLyric(lyric.song_id)">{{lyric.song}}</td>
-    <td><button ng-click="deleteFromUserLyricsDatabase(lyric.id)" class="waves-effect waves-light btn" id="button2">Delete</button></td>
+    <td><button ng-click="deleteFromUserLyricsDatabase(lyric.id)" class="waves-effect waves-light btn" id="button3">Delete</button></td>
 
   </tr>
 

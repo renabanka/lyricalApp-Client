@@ -1,5 +1,18 @@
 <body id="centerlogin">
 
+<div id="mySidenav" class="sidenav">
+    <p class="closebtn" onclick="closeNav()">&times;</p>
+    <ul>
+        <li><div class="userView"></div></li>
+        <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
+        <!--<li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>-->
+        <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
+        <li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>
+    </ul>
+</div>
+
+<span style="font-size:1.5rem;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
+
     <div class="fade-in two" id="loginform2">
       <form id="form1" action="" autocomplete="on"> 
           <p> 
@@ -9,17 +22,12 @@
       </form>
 
     </div>
-      <ul id="slide-out" class="side-nav">
-      <li><div class="userView"></div></li>
-      <li><a class="waves-effect" href="" ng-click="goToLogout()">Log Out</a></li><br><br><br>
-      <li><a class="waves-effect" href="" ng-click="goToDashboard()">Search</a></li>
-      <li><a class="waves-effect" href="" ng-click="goToSavedLyrics()">Saved Lyrics</a></li>
-      <li><a class="waves-effect" href="" ng-click="addLyrics()">Add Lyrics</a></li>
-      </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i id="menubutton" class="material-icons">menu</i></a>
-    <br>
 
-   <div class="fade-in two" id="p-testcenter">
+
+
+
+
+    <div class="fade-in two" id="p-testcenter">
 
     <table>
         <tr class="p-test">
